@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary Google Search SEO Meta Tags -->
+  <title>Mostafa Abdelrrahman El Sayed | Game Developer &amp; Creative Coder</title>
+  <meta name="description" content="Official portfolio made and designed by Mostafa Abdelrrahman El Sayed — Game Developer and Creative Coder specializing in Unity, Unreal Engine, C#, C++, custom shaders, and mobile game apps." />
+  <meta name="keywords" content="Mostafa Abdelrrahman El Sayed, Mostafa Abdelrahman El Sayed, Game Developer, Creative Coder, Unity Developer, Unreal Engine, C#, C++, Game Programming Portfolio, Mobile Game Apps" />
+  <meta name="author" content="Mostafa Abdelrrahman El Sayed" />
+  <meta name="designer" content="Mostafa Abdelrrahman El Sayed" />
+  <meta name="copyright" content="Mostafa Abdelrrahman El Sayed" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <link rel="canonical" href="https://mostafa-abdelrrahman-gamedev.github.io/" />
+
+  <!-- Open Graph / Social Media Previews -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Mostafa Abdelrrahman El Sayed — Game Dev Portfolio" />
+  <meta property="og:title" content="Mostafa Abdelrrahman El Sayed | Game Developer &amp; Creative Coder" />
+  <meta property="og:description" content="Official portfolio made and designed by Mostafa Abdelrrahman El Sayed — Game Developer &amp; Creative Coder specializing in Unity, Unreal Engine 5, C#, C++, and custom shaders." />
+  <meta property="og:url" content="https://mostafa-abdelrrahman-gamedev.github.io/" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mostafa Abdelrrahman El Sayed | Game Developer &amp; Creative Coder" />
+  <meta name="twitter:description" content="Official portfolio made and designed by Mostafa Abdelrrahman El Sayed — Game Developer &amp; Creative Coder." />
+
+  <!-- JSON-LD Structured Data for Google Rich Search Results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://mostafa-abdelrrahman-gamedev.github.io/#person",
+        "name": "Mostafa Abdelrrahman El Sayed",
+        "alternateName": "Mostafa Abdelrahman El Sayed",
+        "jobTitle": "Game Developer & Creative Coder",
+        "url": "https://mostafa-abdelrrahman-gamedev.github.io/",
+        "knowsAbout": [
+          "Game Development",
+          "Creative Coding",
+          "Unity",
+          "Unreal Engine 5",
+          "C#",
+          "C++",
+          "GLSL & HLSL Shaders",
+          "Mobile Game Apps"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://mostafa-abdelrrahman-gamedev.github.io/#website",
+        "name": "Mostafa Abdelrrahman El Sayed — Game Developer & Creative Coder",
+        "url": "https://mostafa-abdelrrahman-gamedev.github.io/",
+        "author": {
+          "@id": "https://mostafa-abdelrrahman-gamedev.github.io/#person"
+        },
+        "creator": {
+          "@id": "https://mostafa-abdelrrahman-gamedev.github.io/#person"
+        },
+        "copyrightHolder": {
+          "@id": "https://mostafa-abdelrrahman-gamedev.github.io/#person"
+        },
+        "copyrightYear": 2026
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts: Space Grotesk, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            obsidian: '#07090E',
+            surface: '#0d111a',
+            panel: '#131926',
+            cyanGlow: '#00F0FF',
+            amberGlow: '#ffb703',
+            violetGlow: '#8B5CF6',
+          },
+          animation: {
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    :root {
+      --bg-obsidian: #07090E;
+      --accent-cyan: #00F0FF;
+      --accent-violet: #8B5CF6;
+      --accent-amber: #ffb703;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+    }
+
+    body {
+      background-color: var(--bg-obsidian);
+      color: #e2e8f0;
+      overflow-x: hidden;
+    }
+
+    /* Subtle tactical grid backdrop */
+    .bg-cyber-grid {
+      background-size: 44px 44px;
+      background-image:
+        linear-gradient(to right, rgba(0, 240, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(139, 92, 246, 0.035) 1px, transparent 1px);
+    }
+
+    /* Glassmorphic Card */
+    .glass-card {
+      background: rgba(13, 17, 26, 0.72);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+    }
+
+    .glass-card-hover {
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .glass-card-hover:hover {
+      transform: translateY(-4px);
+      border-color: rgba(0, 240, 255, 0.35);
+      box-shadow: 0 22px 55px rgba(0, 240, 255, 0.08);
+    }
+
+    .text-gradient-cyan {
+      background: linear-gradient(135deg, #00F0FF 0%, #38bdf8 45%, #8B5CF6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #00F0FF 0%, #0ea5e9 100%);
+      color: #07090E;
+      font-weight: 700;
+      box-shadow: 0 0 24px rgba(0, 240, 255, 0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.08);
+      box-shadow: 0 0 32px rgba(0, 240, 255, 0.5);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #07090E;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #00F0FF;
+    }
+  </style>
+</head>
+<body id="top" class="bg-obsidian bg-cyber-grid font-sans antialiased selection:bg-cyanGlow selection:text-obsidian">
+
+  <!-- Ambient Glow Orbs -->
+  <div class="pointer-events-none fixed inset-0 overflow-hidden z-0">
+    <div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-cyanGlow/10 blur-[120px]"></div>
+    <div class="absolute top-1/3 -right-32 w-96 h-96 rounded-full bg-violetGlow/10 blur-[130px]"></div>
+  </div>
+
+  <!-- =========================================================
+       STICKY GLASSMORPHIC TOP NAVIGATION BAR
+  ========================================================== -->
+  <header class="sticky top-0 z-40 px-3 sm:px-6 pt-3">
+    <nav class="max-w-6xl mx-auto glass-card rounded-2xl px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
+      <!-- Brand Monogram & Ownership -->
+      <a href="#top" class="flex items-center gap-3 group min-w-0">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyanGlow/20 to-violetGlow/25 border border-cyanGlow/40 flex items-center justify-center relative overflow-hidden shrink-0">
+          <span class="font-mono font-bold text-cyanGlow text-sm tracking-tighter group-hover:scale-110 transition-transform">MAE</span>
+        </div>
+        <div class="min-w-0">
+          <span class="font-display font-bold text-white tracking-tight text-sm sm:text-base block leading-tight truncate">
+            Mostafa Abdelrrahman<span class="text-cyanGlow"> El Sayed</span>
+          </span>
+          <span class="font-mono text-[10px] text-slate-400 tracking-wider uppercase block truncate">
+            Made &amp; Designed by Mostafa Abdelrrahman El Sayed
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <div class="hidden lg:flex items-center gap-6 text-xs font-mono text-slate-300">
+        <a href="#sandbox" class="hover:text-cyanGlow transition">01. Sandbox</a>
+        <a href="#projects" class="hover:text-cyanGlow transition">02. Builds</a>
+        <a href="#skills" class="hover:text-cyanGlow transition">03. Arsenal</a>
+        <a href="#contact" class="hover:text-cyanGlow transition">04. Contact</a>
+      </div>
+
+      <!-- Action Buttons: Open Live Site, Share Link & Mobile Menu -->
+      <div class="flex items-center gap-2 shrink-0">
+        <a
+          href="https://mostafa-abdelrrahman-gamedev.github.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+          onclick="handleLiveSiteClick(event)"
+          class="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-xl border border-cyanGlow/45 bg-cyanGlow/10 text-cyanGlow hover:bg-cyanGlow/20 font-mono text-xs transition"
+          title="Open Live Website"
+        >
+          <span>Open Live Site</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+
+        <button
+          type="button"
+          onclick="shareWebsite()"
+          class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl border border-violetGlow/45 bg-violetGlow/15 text-purple-200 hover:bg-violetGlow/25 font-mono text-xs transition"
+          title="Share Portfolio Link"
+        >
+          <svg class="w-3.5 h-3.5 text-violetGlow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+          </svg>
+          <span class="hidden md:inline">Share Link</span>
+        </button>
+
+        <button id="mobileMenuBtn" aria-label="Toggle Menu" class="lg:hidden p-2 rounded-xl border border-white/10 text-slate-300 hover:text-cyanGlow">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobileMenu" class="hidden lg:hidden max-w-6xl mx-auto mt-2 glass-card rounded-2xl p-4 flex flex-col gap-2.5 text-sm font-mono text-slate-300">
+      <div class="grid grid-cols-2 gap-2">
+        <a href="https://mostafa-abdelrrahman-gamedev.github.io/" target="_blank" rel="noopener noreferrer" onclick="handleLiveSiteClick(event)" class="py-2.5 px-3 rounded-xl bg-cyanGlow/15 border border-cyanGlow/40 text-cyanGlow text-xs flex items-center justify-between">
+          <span>Open Live Site</span>
+          <span>↗</span>
+        </a>
+        <button type="button" onclick="shareWebsite()" class="py-2.5 px-3 rounded-xl bg-violetGlow/15 border border-violetGlow/40 text-purple-200 text-xs flex items-center justify-between">
+          <span>Share Link</span>
+          <span>📤</span>
+        </button>
+      </div>
+      <a href="#sandbox" class="py-2 px-3 rounded-xl hover:bg-white/5 text-cyanGlow">● 01. Playable Dev Sandbox</a>
+      <a href="#projects" class="py-2 px-3 rounded-xl hover:bg-white/5">02. Featured Game Builds</a>
+      <a href="#skills" class="py-2 px-3 rounded-xl hover:bg-white/5">03. Technical Arsenal</a>
+      <a href="#contact" class="py-2 px-3 rounded-xl hover:bg-white/5">04. Hire &amp; Collaborate</a>
+    </div>
+  </header>
+
+  <main class="relative z-10">
+
+    <!-- =========================================================
+         HERO SECTION
+    ========================================================== -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-10 pb-16 lg:pt-16 lg:pb-24">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+
+        <!-- Left Column: Copy, CTAs & Shareable Website Launcher -->
+        <div class="lg:col-span-7 space-y-6">
+          <!-- Status Pill Badge -->
+          <div class="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full glass-card border border-cyanGlow/35">
+            <span class="w-2 h-2 rounded-full bg-cyanGlow animate-pulse"></span>
+            <span class="font-mono text-xs text-cyanGlow font-semibold">Game Developer</span>
+            <span class="font-mono text-[11px] text-slate-300">// MADE &amp; DESIGNED BY MOSTAFA ABDELRAHMAN EL SAYED</span>
+          </div>
+
+          <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-white leading-[1.08]">
+            Mostafa Abdelrrahman El Sayed — <span class="text-gradient-cyan">Game Developer</span> &amp; Creative Coder.
+          </h1>
+
+          <p class="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed">
+            I architect low-latency gameplay systems, custom GLSL/HLSL shaders, physics simulations, and cross-platform mobile &amp; PC game applications—turning raw math and clean C#/C++/TypeScript code into unforgettable player experiences.
+          </p>
+
+          <!-- Prominent Clickable & Shareable Live Website Box -->
+          <div class="glass-card rounded-2xl p-4 border border-cyanGlow/35 space-y-3">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span class="font-mono text-[11px] uppercase tracking-wider text-cyanGlow flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                Clickable &amp; Shareable Official Website
+              </span>
+              <span class="font-mono text-[11px] text-slate-400">Made &amp; Designed by Mostafa Abdelrrahman El Sayed</span>
+            </div>
+
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3 rounded-xl bg-black/60 border border-white/10">
+              <a
+                id="liveSiteUrl"
+                href="https://mostafa-abdelrrahman-gamedev.github.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                onclick="handleLiveSiteClick(event)"
+                class="font-mono text-xs sm:text-sm text-cyanGlow hover:underline break-all"
+              >
+                https://mostafa-abdelrrahman-gamedev.github.io/
+              </a>
+
+              <div class="flex flex-wrap items-center gap-2 shrink-0">
+                <a
+                  href="https://mostafa-abdelrrahman-gamedev.github.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onclick="handleLiveSiteClick(event)"
+                  class="btn-primary px-3.5 py-2 rounded-xl font-mono text-xs inline-flex items-center gap-1.5"
+                >
+                  <span>Open Website</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+                <button
+                  id="copyUrlBtn"
+                  type="button"
+                  onclick="copyPublicUrl(this)"
+                  class="px-3.5 py-2 rounded-xl bg-white/10 hover:bg-cyanGlow hover:text-obsidian text-white font-mono text-xs transition"
+                >
+                  Copy Link
+                </button>
+                <button
+                  type="button"
+                  onclick="shareWebsite()"
+                  class="px-3.5 py-2 rounded-xl bg-violetGlow/20 hover:bg-violetGlow/35 border border-violetGlow/50 text-purple-200 font-mono text-xs inline-flex items-center gap-1.5 transition"
+                >
+                  <span>Share Website</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Secondary Navigation CTAs -->
+          <div class="flex flex-wrap items-center gap-3 pt-1">
+            <a href="#sandbox" class="px-5 py-3 rounded-xl glass-card hover:border-violetGlow/60 text-white font-mono text-xs sm:text-sm flex items-center gap-2 transition">
+              <svg class="w-4 h-4 text-violetGlow" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+              </svg>
+              <span>Play Live Physics Sandbox</span>
+            </a>
+            <a href="#projects" class="px-5 py-3 rounded-xl glass-card hover:border-cyanGlow/50 text-slate-200 font-mono text-xs sm:text-sm transition">
+              Explore Game Builds ↓
+            </a>
+          </div>
+
+          <!-- Telemetry Stats Strip -->
+          <div class="grid grid-cols-3 gap-3 pt-2">
+            <div class="glass-card rounded-xl p-3">
+              <span class="font-display font-bold text-xl sm:text-2xl text-white block">120 FPS</span>
+              <span class="font-mono text-[11px] text-slate-400">Frame-Budget Target</span>
+            </div>
+            <div class="glass-card rounded-xl p-3">
+              <span class="font-display font-bold text-xl sm:text-2xl text-cyanGlow block">C# / C++20</span>
+              <span class="font-mono text-[11px] text-slate-400">Engine Architecture</span>
+            </div>
+            <div class="glass-card rounded-xl p-3">
+              <span class="font-display font-bold text-xl sm:text-2xl text-amberGlow block">GLSL / HLSL</span>
+              <span class="font-mono text-[11px] text-slate-400">Custom Shader Pipelines</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: C# Unity Burst / JobSystem RigidBodySolver Card -->
+        <div class="lg:col-span-5">
+          <div class="glass-card rounded-3xl overflow-hidden border border-white/15 shadow-2xl">
+            <!-- Terminal Header -->
+            <div class="px-4 py-3 bg-slate-950/90 border-b border-white/10 flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+                <span class="w-3 h-3 rounded-full bg-amber-400/80"></span>
+                <span class="w-3 h-3 rounded-full bg-emerald-400/80"></span>
+                <span class="ml-2 font-mono text-xs text-slate-400">RigidBodySolver.cs</span>
+              </div>
+              <span class="px-2 py-0.5 rounded bg-cyanGlow/15 text-cyanGlow font-mono text-[10px]">UNITY BURST</span>
+            </div>
+
+            <!-- Code Preview -->
+            <div class="p-5 font-mono text-xs sm:text-[13px] leading-relaxed overflow-x-auto bg-[#080b12]/95">
+<pre class="text-slate-300"><code><span class="text-slate-500">// Made &amp; Designed by Mostafa Abdelrrahman El Sayed</span>
+[<span class="text-emerald-400">BurstCompile</span>]
+<span class="text-purple-400">public struct</span> <span class="text-cyanGlow">RigidBodySolver</span> : <span class="text-amberGlow">IJobParallelFor</span> {
+  [<span class="text-emerald-400">ReadOnly</span>] <span class="text-purple-400">public</span> <span class="text-sky-300">float</span> DeltaTime;
+  <span class="text-purple-400">public</span> NativeArray&lt;<span class="text-cyanGlow">float3</span>&gt; Velocities;
+  <span class="text-purple-400">public</span> NativeArray&lt;<span class="text-cyanGlow">float3</span>&gt; Positions;
+
+  <span class="text-purple-400">public void</span> <span class="text-amberGlow">Execute</span>(<span class="text-sky-300">int</span> i) {
+    <span class="text-slate-500">// Semi-implicit Euler integration</span>
+    <span class="text-sky-300">float3</span> accel = <span class="text-purple-400">new</span> <span class="text-cyanGlow">float3</span>(0f, -9.81f, 0f);
+    Velocities[i] += accel * DeltaTime;
+    Positions[i]  += Velocities[i] * DeltaTime;
+  }
+}</code></pre>
+            </div>
+
+            <!-- Card Footer -->
+            <div class="px-5 py-3 bg-slate-950/70 border-t border-white/10 flex items-center justify-between font-mono text-[11px] text-slate-400">
+              <span>SIMD Vectorized • Zero GC Alloc</span>
+              <span class="text-emerald-400">● 0.14ms / 10k Bodies</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         PLAYABLE DEV SANDBOX SECTION (#sandbox)
+    ========================================================== -->
+    <section id="sandbox" class="max-w-6xl mx-auto px-4 sm:px-6 py-14">
+      <div class="glass-card rounded-3xl p-5 sm:p-8 border border-cyanGlow/25 space-y-5">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <span class="font-mono text-xs uppercase tracking-widest text-cyanGlow">// 01. Interactive Physics Engine Demo</span>
+            <h2 class="font-display font-bold text-2xl sm:text-3xl text-white mt-1">Playable Gravity &amp; Particle Sandbox</h2>
+            <p class="text-slate-400 text-xs sm:text-sm mt-1">
+              Move or drag your cursor/finger across the field to guide energy orbs into the glowing amber target core.
+            </p>
+          </div>
+
+          <!-- Telemetry Readout -->
+          <div class="flex items-center gap-3 font-mono text-xs">
+            <div class="px-3.5 py-2 rounded-xl bg-black/60 border border-white/10">
+              <span class="text-slate-400">ACTIVE ORBS:</span>
+              <span id="sandboxOrbCount" class="text-cyanGlow font-bold ml-1">18</span>
+            </div>
+            <div class="px-3.5 py-2 rounded-xl bg-black/60 border border-amberGlow/30">
+              <span class="text-slate-400">CORES COLLECTED:</span>
+              <span id="sandboxScore" class="text-amberGlow font-bold ml-1">0</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Responsive Canvas Container -->
+        <div id="sandboxContainer" class="relative w-full h-72 sm:h-96 rounded-2xl overflow-hidden bg-[#05070c] border border-white/10 touch-none cursor-crosshair">
+          <canvas id="sandboxCanvas" class="block w-full h-full"></canvas>
+          <div class="pointer-events-none absolute bottom-3 left-3 px-2.5 py-1 rounded-lg bg-black/65 border border-white/10 font-mono text-[10px] text-slate-400">
+            Engineered by Mostafa Abdelrrahman El Sayed • 2D Spatial Force Solver
+          </div>
+        </div>
+
+        <!-- Sandbox Controls Outside Canvas -->
+        <div class="flex flex-wrap items-center justify-between gap-3 pt-1">
+          <div class="flex flex-wrap items-center gap-2 font-mono text-xs">
+            <button id="sandboxBurstBtn" type="button" class="px-4 py-2.5 rounded-xl bg-violetGlow/20 border border-violetGlow/50 text-purple-200 hover:bg-violetGlow/35 transition">
+              + Burst Spawn
+            </button>
+            <button id="sandboxModeBtn" type="button" class="px-4 py-2.5 rounded-xl bg-cyanGlow/15 border border-cyanGlow/45 text-cyanGlow hover:bg-cyanGlow/25 transition">
+              Mode: Attract Well
+            </button>
+            <button id="sandboxResetBtn" type="button" class="px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-slate-300 hover:text-white hover:bg-white/10 transition">
+              Reset Field
+            </button>
+          </div>
+          <span class="font-mono text-[11px] text-slate-400">Tip: Switch between Attract Well &amp; Repel Field to slingshot orbs.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         FEATURED GAME BUILDS SECTION (#projects)
+    ========================================================== -->
+    <section id="projects" class="max-w-6xl mx-auto px-4 sm:px-6 py-14 space-y-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-widest text-cyanGlow">// 02. Featured Builds &amp; Systems</span>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mt-1">Shipped Games &amp; Engine Architecture</h2>
+        </div>
+        <span class="font-mono text-xs text-slate-400">Click "Inspect Code" on any build to review core algorithms</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Project 1: Aether Drift -->
+        <article class="glass-card glass-card-hover rounded-3xl p-6 flex flex-col justify-between gap-6">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between gap-2">
+              <span class="px-3 py-1 rounded-full bg-cyanGlow/15 border border-cyanGlow/30 text-cyanGlow font-mono text-[11px]">UNITY 6 • C# • HLSL</span>
+              <span class="font-mono text-xs text-slate-400">PC / CONSOLE</span>
+            </div>
+            <h3 class="font-display font-bold text-2xl text-white">Aether Drift</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              High-velocity anti-gravity racer featuring a custom 4-point raycast hover suspension solver, spline-aligned magnetic track gravity, and volumetric plasma exhaust shaders.
+            </p>
+            <div class="flex flex-wrap gap-2 font-mono text-[11px] text-slate-300">
+              <span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10">Hooke's Law Physics</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10">120 FPS Locked</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10">Custom Post-FX</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+            <span class="font-mono text-[11px] text-slate-400">By Mostafa Abdelrrahman El Sayed</span>
+            <button type="button" onclick="openCodeModal('aether')" class="px-4 py-2 rounded-xl bg-cyanGlow/15 hover:bg-cyanGlow hover:text-obsidian border border-cyanGlow/40 text-cyanGlow font-mono text-xs font-semibold transition">
+              Inspect Code &lt;/&gt;
+            </button>
+          </div>
+        </article>
+
+        <!-- Project 2: Pulse Quest -->
+        <article class="glass-card glass-card-hover rounded-3xl p-6 flex flex-col justify-between gap-6">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between gap-2">
+              <span class="px-3 py-1 rounded-full bg-violetGlow/20 border border-violetGlow/40 text-purple-300 font-mono text-[11px]">MOBILE APP • iOS &amp; ANDROID</span>
+              <span class="font-mono text-xs text-slate-400">RHYTHM RPG</span>
+            </div>
+            <h3 class="font-display font-bold text-2xl text-white">Pulse Quest</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Sub-millisecond rhythm dungeon crawler engineered for mobile touchscreens with hardware DSP audio clock synchronization, adaptive haptics, and dynamic boss beat-mapping.
+            </p>
+            <div class="flex flex-wrap gap-2 font-mono text-[11px] text-slate-300">
+              <span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10">DSP Clock Sync</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10">CoreHaptics API</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10">Zero-GC Pooling</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+            <span class="font-mono text-[11px] text-slate-400">By Mostafa Abdelrrahman El Sayed</span>
+            <button type="button" onclick="openCodeModal('pulse')" class="px-4 py-2 rounded-xl bg-violetGlow/20 hover:bg-violetGlow hover:text-white border border-violetGlow/45 text-purple-200 font-mono text-xs font-semibold transition">
+              Inspect Code &lt;/&gt;
+            </button>
+          </div>
+        </article>
+
+        <!-- Project 3: VoxelForge -->
+        <article class="glass-card glass-card-hover rounded-3xl p-6 flex flex-col justify-between gap-6">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between gap-2">
+              <span class="px-3 py-1 rounded-full bg-amberGlow/15 border border-amberGlow/35 text-amberGlow font-mono text-[11px]">C++20 • UNREAL ENGINE 5</span>
+              <span class="font-mono text-xs text-slate-400">VOXEL ENGINE</span>
+            </div>
+            <h3 class="font-display font-bold text-2xl text-white">VoxelForge</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Multi-threaded procedural terrain engine utilizing greedy quad-merging chunk meshers, 3D Simplex noise caves, and real-time destructible voxel global illumination.
+            </p>
+            <div class="flex flex-wrap gap-2 font-mono text-[11px] text-slate-300">
+              <span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10">Greedy Meshing</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10">-84% Triangle Count</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10">Async Workers</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+            <span class="font-mono text-[11px] text-slate-400">By Mostafa Abdelrrahman El Sayed</span>
+            <button type="button" onclick="openCodeModal('voxel')" class="px-4 py-2 rounded-xl bg-amberGlow/15 hover:bg-amberGlow hover:text-obsidian border border-amberGlow/40 text-amberGlow font-mono text-xs font-semibold transition">
+              Inspect Code &lt;/&gt;
+            </button>
+          </div>
+        </article>
+
+        <!-- Project 4: Chrono Hex -->
+        <article class="glass-card glass-card-hover rounded-3xl p-6 flex flex-col justify-between gap-6">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between gap-2">
+              <span class="px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-400/35 text-emerald-300 font-mono text-[11px]">GODOT 4 • RUST GDEXTENSION</span>
+              <span class="font-mono text-xs text-slate-400">TACTICAL STRATEGY</span>
+            </div>
+            <h3 class="font-display font-bold text-2xl text-white">Chrono Hex</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Turn-based temporal tactics game featuring deterministic axial hex-grid A* pathfinding, timeline rewind command patterns, and custom outline toon shaders.
+            </p>
+            <div class="flex flex-wrap gap-2 font-mono text-[11px] text-slate-300">
+              <span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10">Axial Hex Math</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10">Deterministic Replay</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10">GLSL Shaders</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+            <span class="font-mono text-[11px] text-slate-400">By Mostafa Abdelrrahman El Sayed</span>
+            <button type="button" onclick="openCodeModal('chrono')" class="px-4 py-2 rounded-xl bg-emerald-500/15 hover:bg-emerald-400 hover:text-obsidian border border-emerald-400/40 text-emerald-300 font-mono text-xs font-semibold transition">
+              Inspect Code &lt;/&gt;
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         TECHNICAL ARSENAL SECTION (#skills)
+    ========================================================== -->
+    <section id="skills" class="max-w-6xl mx-auto px-4 sm:px-6 py-14 space-y-8">
+      <div>
+        <span class="font-mono text-xs uppercase tracking-widest text-cyanGlow">// 03. Technical Arsenal</span>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mt-1">Engines, Languages &amp; Graphics Stack</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="glass-card rounded-2xl p-5 space-y-2.5">
+          <div class="flex items-center justify-between">
+            <span class="font-display font-bold text-lg text-white">Unity &amp; DOTS / Burst</span>
+            <span class="font-mono text-xs text-cyanGlow">PRIMARY</span>
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            Custom gameplay frameworks, C# Job System, Burst SIMD optimization, ScriptableObject architectures, and URP/HDRP pipelines.
+          </p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-5 space-y-2.5">
+          <div class="flex items-center justify-between">
+            <span class="font-display font-bold text-lg text-white">Unreal Engine 5</span>
+            <span class="font-mono text-xs text-violetGlow">C++ / GAS</span>
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            Gameplay Ability System (GAS), C++ actor components, Niagara VFX systems, Lumen lighting, and replicated multiplayer mechanics.
+          </p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-5 space-y-2.5">
+          <div class="flex items-center justify-between">
+            <span class="font-display font-bold text-lg text-white">C# &amp; Modern C++20</span>
+            <span class="font-mono text-xs text-amberGlow">SYSTEMS</span>
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            Cache-friendly data-oriented design, custom spatial partitioning (Quadtrees/Octrees), deterministic physics, and zero-allocation memory pools.
+          </p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-5 space-y-2.5">
+          <div class="flex items-center justify-between">
+            <span class="font-display font-bold text-lg text-white">GLSL &amp; HLSL Shaders</span>
+            <span class="font-mono text-xs text-cyanGlow">GRAPHICS</span>
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            Raymarching, signed distance fields (SDFs), dissolve/hologram effects, stylized water caustics, and GPU instanced particle systems.
+          </p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-5 space-y-2.5">
+          <div class="flex items-center justify-between">
+            <span class="font-display font-bold text-lg text-white">Mobile Game Optimization</span>
+            <span class="font-mono text-xs text-emerald-400">iOS / ANDROID</span>
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            Draw-call batching, ASTC texture compression, thermal throttling prevention, responsive touch controls, and App Store / Google Play deployment.
+          </p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-5 space-y-2.5">
+          <div class="flex items-center justify-between">
+            <span class="font-display font-bold text-lg text-white">Creative Web &amp; WebGL</span>
+            <span class="font-mono text-xs text-violetGlow">INTERACTIVE</span>
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            HTML5 Canvas 2D/WebGL simulations, Three.js interactive worlds, TypeScript game loops, and responsive UI/UX design.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CONTACT & COLLABORATION SECTION (#contact)
+    ========================================================== -->
+    <section id="contact" class="max-w-6xl mx-auto px-4 sm:px-6 py-14">
+      <div class="glass-card rounded-3xl p-6 sm:p-10 border border-white/15 grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- Left Info -->
+        <div class="lg:col-span-5 space-y-5">
+          <span class="font-mono text-xs uppercase tracking-widest text-cyanGlow">// 04. Ready to Build</span>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-white">Work Directly With Mostafa Abdelrrahman El Sayed.</h2>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Available for full-cycle game development, mobile game apps, gameplay engineering, custom shader work, and technical consulting.
+          </p>
+
+          <!-- Copy Email Box -->
+          <div class="p-3.5 rounded-xl bg-black/55 border border-white/10 flex items-center justify-between gap-2">
+            <span id="devEmail" class="font-mono text-xs sm:text-sm text-cyanGlow truncate">mostafa.abdelrrahman@gamedev.io</span>
+            <button id="copyEmailBtn" type="button" class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-cyanGlow hover:text-obsidian font-mono text-xs text-white transition shrink-0">
+              Copy Email
+            </button>
+          </div>
+
+          <!-- Clickable & Shareable Portfolio Link Box -->
+          <div class="p-3.5 rounded-xl bg-black/55 border border-cyanGlow/30 space-y-2.5">
+            <div class="flex items-center justify-between gap-2">
+              <span class="font-mono text-[10px] uppercase tracking-wider text-slate-400">Shareable Portfolio Link</span>
+              <span class="px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-300 font-mono text-[10px]">PUBLIC LIVE URL</span>
+            </div>
+            <a
+              href="https://mostafa-abdelrrahman-gamedev.github.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onclick="handleLiveSiteClick(event)"
+              class="font-mono text-xs text-cyanGlow hover:underline block break-all"
+            >
+              https://mostafa-abdelrrahman-gamedev.github.io/ ↗
+            </a>
+            <div class="flex flex-wrap gap-2 pt-1">
+              <a
+                href="https://mostafa-abdelrrahman-gamedev.github.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                onclick="handleLiveSiteClick(event)"
+                class="px-3 py-1.5 rounded-lg bg-cyanGlow/15 hover:bg-cyanGlow hover:text-obsidian border border-cyanGlow/40 text-cyanGlow font-mono text-xs transition"
+              >
+                Open Site ↗
+              </a>
+              <button
+                type="button"
+                onclick="copyPublicUrl(this)"
+                class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-mono text-xs transition"
+              >
+                Copy Link
+              </button>
+              <button
+                type="button"
+                onclick="shareWebsite()"
+                class="px-3 py-1.5 rounded-lg bg-violetGlow/20 hover:bg-violetGlow/35 border border-violetGlow/45 text-purple-200 font-mono text-xs transition"
+              >
+                Share
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Form -->
+        <form id="contactForm" class="lg:col-span-7 space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="senderName" class="block font-mono text-xs text-slate-400 mb-1.5">Your Name / Studio</label>
+              <input id="senderName" type="text" required placeholder="Alex Mercer / Nebula Games" class="w-full px-4 py-3 rounded-xl bg-black/55 border border-white/10 focus:border-cyanGlow focus:outline-none text-sm text-white" />
+            </div>
+            <div>
+              <label for="senderEmail" class="block font-mono text-xs text-slate-400 mb-1.5">Email Address</label>
+              <input id="senderEmail" type="email" required placeholder="alex@studio.com" class="w-full px-4 py-3 rounded-xl bg-black/55 border border-white/10 focus:border-cyanGlow focus:outline-none text-sm text-white" />
+            </div>
+          </div>
+
+          <div>
+            <label for="projectType" class="block font-mono text-xs text-slate-400 mb-1.5">Project Scope</label>
+            <select id="projectType" class="w-full px-4 py-3 rounded-xl bg-[#090c14] border border-white/10 focus:border-cyanGlow focus:outline-none text-sm text-white">
+              <option>Full Game Development (Unity / Unreal)</option>
+              <option>Mobile Game App (iOS &amp; Android)</option>
+              <option>Custom GLSL / HLSL Shaders &amp; VFX</option>
+              <option>Gameplay Systems &amp; Performance Optimization</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="projectBrief" class="block font-mono text-xs text-slate-400 mb-1.5">Project Details</label>
+            <textarea id="projectBrief" rows="4" required placeholder="Tell Mostafa about your game concept, target platforms, and timeline..." class="w-full px-4 py-3 rounded-xl bg-black/55 border border-white/10 focus:border-cyanGlow focus:outline-none text-sm text-white"></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary w-full sm:w-auto px-6 py-3.5 rounded-xl font-mono text-sm">
+            Transmit Brief to Mostafa →
+          </button>
+
+          <div id="formFeedback" class="hidden p-3.5 rounded-xl bg-emerald-500/15 border border-emerald-400/40 text-emerald-300 font-mono text-xs">
+            ✓ Transmission logged! Mostafa Abdelrrahman El Sayed will respond shortly.
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       FOOTER WITH EXPLICIT MADE & DESIGNED ATTRIBUTION
+  ========================================================== -->
+  <footer class="relative z-10 py-10 px-4 border-t border-white/10 text-center font-mono text-xs text-slate-400 space-y-4">
+    <div class="flex flex-wrap items-center justify-center gap-2.5">
+      <span class="px-3.5 py-1.5 rounded-full bg-cyanGlow/10 border border-cyanGlow/35 text-cyanGlow font-semibold">
+        Made by Mostafa Abdelrrahman El Sayed • Designed by Mostafa Abdelrrahman El Sayed
+      </span>
+      <a
+        href="https://mostafa-abdelrrahman-gamedev.github.io/"
+        target="_blank"
+        rel="noopener noreferrer"
+        onclick="handleLiveSiteClick(event)"
+        class="px-3.5 py-1.5 rounded-full bg-white/5 hover:bg-cyanGlow hover:text-obsidian border border-white/15 text-white transition"
+      >
+        Open Live Website ↗
+      </a>
+      <button
+        type="button"
+        onclick="shareWebsite()"
+        class="px-3.5 py-1.5 rounded-full bg-violetGlow/15 hover:bg-violetGlow/30 border border-violetGlow/45 text-purple-200 transition"
+      >
+        Share Portfolio
+      </button>
+    </div>
+    <p class="text-slate-300">
+      © 2026 Mostafa Abdelrrahman El Sayed. Made &amp; Designed by Mostafa Abdelrrahman El Sayed. All Rights Reserved.
+    </p>
+  </footer>
+
+  <!-- =========================================================
+       LIVE WEBSITE LAUNCHER & SOCIAL SHARE MODAL
+  ========================================================== -->
+  <div id="launchModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+    <div class="glass-card rounded-3xl max-w-lg w-full overflow-hidden border border-cyanGlow/45 shadow-2xl">
+      <div class="px-6 py-4 bg-slate-950 border-b border-white/10 flex items-center justify-between">
+        <div>
+          <span class="font-mono text-[11px] text-cyanGlow uppercase tracking-wider">OPEN &amp; SHARE WEBSITE</span>
+          <h3 class="font-display font-bold text-lg text-white">Mostafa Abdelrrahman El Sayed</h3>
+        </div>
+        <button type="button" onclick="closeLaunchModal()" aria-label="Close modal" class="p-2 rounded-xl bg-white/5 hover:bg-white/15 text-slate-300 hover:text-white transition">✕</button>
+      </div>
+
+      <div class="p-6 space-y-4 text-sm text-slate-300">
+        <p>
+          Official portfolio <strong class="text-white">made and designed by Mostafa Abdelrrahman El Sayed</strong>. Open the live site directly or share the link below:
+        </p>
+
+        <div class="p-3.5 rounded-xl bg-black/65 border border-cyanGlow/35 flex items-center justify-between gap-2">
+          <a
+            href="https://mostafa-abdelrrahman-gamedev.github.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-mono text-xs text-cyanGlow hover:underline break-all"
+          >
+            https://mostafa-abdelrrahman-gamedev.github.io/
+          </a>
+          <button
+            type="button"
+            onclick="copyPublicUrl(this)"
+            class="px-3 py-1.5 rounded-lg bg-cyanGlow text-obsidian font-mono text-xs font-bold shrink-0 hover:brightness-110 transition"
+          >
+            Copy
+          </button>
+        </div>
+
+        <!-- Quick Share Platforms -->
+        <div class="space-y-2">
+          <span class="font-mono text-[11px] uppercase tracking-wider text-slate-400 block">Share Directly To</span>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 font-mono text-xs">
+            <a id="shareWhatsApp" href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-2.5 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-400/35 text-emerald-300 text-center transition">
+              WhatsApp
+            </a>
+            <a id="shareTwitter" href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-2.5 rounded-xl bg-sky-500/15 hover:bg-sky-500/25 border border-sky-400/35 text-sky-300 text-center transition">
+              X / Twitter
+            </a>
+            <a id="shareLinkedIn" href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-2.5 rounded-xl bg-blue-500/15 hover:bg-blue-500/25 border border-blue-400/35 text-blue-300 text-center transition">
+              LinkedIn
+            </a>
+            <a id="shareEmailLink" href="#" class="px-3 py-2.5 rounded-xl bg-amberGlow/15 hover:bg-amberGlow/25 border border-amberGlow/35 text-amberGlow text-center transition">
+              Email
+            </a>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-white/10">
+          <a
+            href="https://mostafa-abdelrrahman-gamedev.github.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-primary px-4 py-2.5 rounded-xl font-mono text-xs inline-flex items-center gap-1.5"
+          >
+            <span>Open External Tab</span>
+            <span>↗</span>
+          </a>
+          <button type="button" onclick="closeLaunchModal()" class="px-4 py-2.5 rounded-xl border border-white/10 text-slate-400 hover:text-white font-mono text-xs transition">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       INSPECT CODE MODAL
+  ========================================================== -->
+  <div id="codeModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+    <div class="glass-card rounded-3xl max-w-2xl w-full overflow-hidden border border-cyanGlow/40 shadow-2xl">
+      <div class="px-6 py-4 bg-slate-950 border-b border-white/10 flex items-center justify-between gap-3">
+        <div>
+          <span id="modalTag" class="font-mono text-[11px] text-cyanGlow uppercase tracking-wider block"></span>
+          <h3 id="modalTitle" class="font-display font-bold text-lg text-white"></h3>
+        </div>
+        <button type="button" onclick="closeCodeModal()" aria-label="Close code modal" class="p-2 rounded-xl bg-white/5 hover:bg-white/15 text-slate-300 hover:text-white transition">✕</button>
+      </div>
+      <div class="p-6 space-y-4">
+        <p id="modalDesc" class="text-slate-300 text-sm leading-relaxed"></p>
+        <div class="p-4 rounded-2xl bg-[#06080e] border border-white/10 font-mono text-xs text-cyanGlow overflow-x-auto">
+          <pre><code id="modalCode"></code></pre>
+        </div>
+        <div class="flex justify-end">
+          <button type="button" onclick="closeCodeModal()" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-mono text-xs transition">
+            Close Inspector
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       JAVASCRIPT LOGIC (SANDBOX, CODE INSPECTOR, SHARE & CLIPBOARD)
+  ========================================================== -->
+  <script>
+    const PORTFOLIO_URL = 'https://mostafa-abdelrrahman-gamedev.github.io/';
+    const PORTFOLIO_TITLE = 'Mostafa Abdelrrahman El Sayed — Game Developer & Creative Coder';
+    const PORTFOLIO_SHARE_TEXT = 'Check out the official Game Developer & Creative Coder portfolio made and designed by Mostafa Abdelrrahman El Sayed:';
+
+    // 1. Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // 2. Playable 2D Gravity & Particle Sandbox
+    (function initSandbox() {
+      const container = document.getElementById('sandboxContainer');
+      const canvas = document.getElementById('sandboxCanvas');
+      const ctx = canvas.getContext('2d');
+
+      let w = 0;
+      let h = 0;
+      let orbs = [];
+      let score = 0;
+      let attractMode = true;
+      const pointer = { x: 0, y: 0, active: false };
+      const target = { x: 150, y: 150, r: 16, pulse: 0 };
+
+      function spawnTarget() {
+        target.x = 50 + Math.random() * Math.max(80, w - 100);
+        target.y = 50 + Math.random() * Math.max(80, h - 100);
+      }
+
+      function resetSandbox() {
+        w = canvas.width = container.offsetWidth;
+        h = canvas.height = container.offsetHeight;
+        score = 0;
+        document.getElementById('sandboxScore').textContent = score;
+        orbs = Array.from({ length: 18 }, (_, i) => ({
+          x: 40 + Math.random() * Math.max(60, w - 80),
+          y: 40 + Math.random() * Math.max(60, h - 80),
+          vx: (Math.random() - 0.5) * 4,
+          vy: (Math.random() - 0.5) * 4,
+          r: 6 + (i % 4),
+          hue: i % 2 === 0 ? '#00F0FF' : '#8B5CF6',
+          trail: []
+        }));
+        document.getElementById('sandboxOrbCount').textContent = orbs.length;
+        spawnTarget();
+      }
+
+      window.addEventListener('resize', () => {
+        w = canvas.width = container.offsetWidth;
+        h = canvas.height = container.offsetHeight;
+      });
+
+      function updatePointer(clientX, clientY) {
+        const rect = canvas.getBoundingClientRect();
+        pointer.x = clientX - rect.left;
+        pointer.y = clientY - rect.top;
+        pointer.active = true;
+      }
+
+      canvas.addEventListener('mousemove', e => updatePointer(e.clientX, e.clientY));
+      canvas.addEventListener('mouseleave', () => { pointer.active = false; });
+      canvas.addEventListener('touchstart', e => {
+        if (e.touches[0]) updatePointer(e.touches[0].clientX, e.touches[0].clientY);
+      }, { passive: true });
+      canvas.addEventListener('touchmove', e => {
+        if (e.touches[0]) updatePointer(e.touches[0].clientX, e.touches[0].clientY);
+      }, { passive: true });
+      canvas.addEventListener('touchend', () => { pointer.active = false; });
+
+      document.getElementById('sandboxBurstBtn').addEventListener('click', () => {
+        for (let i = 0; i < 6; i++) {
+          const angle = (Math.PI * 2 * i) / 6;
+          orbs.push({
+            x: w / 2,
+            y: h / 2,
+            vx: Math.cos(angle) * 5.5,
+            vy: Math.sin(angle) * 5.5,
+            r: 6 + (i % 3),
+            hue: i % 2 === 0 ? '#00F0FF' : '#8B5CF6',
+            trail: []
+          });
+        }
+        document.getElementById('sandboxOrbCount').textContent = orbs.length;
+      });
+
+      const modeBtn = document.getElementById('sandboxModeBtn');
+      modeBtn.addEventListener('click', () => {
+        attractMode = !attractMode;
+        modeBtn.textContent = attractMode ? 'Mode: Attract Well' : 'Mode: Repel Field';
+      });
+
+      document.getElementById('sandboxResetBtn').addEventListener('click', resetSandbox);
+
+      function animate() {
+        ctx.fillStyle = 'rgba(5, 7, 12, 0.28)';
+        ctx.fillRect(0, 0, w, h);
+
+        // Draw target energy core
+        target.pulse += 0.06;
+        const glowRadius = target.r + Math.sin(target.pulse) * 4;
+        ctx.beginPath();
+        ctx.arc(target.x, target.y, glowRadius + 8, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(255, 183, 3, 0.14)';
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(target.x, target.y, target.r, 0, Math.PI * 2);
+        ctx.fillStyle = '#ffb703';
+        ctx.fill();
+
+        // Draw pointer gravity well
+        if (pointer.active) {
+          ctx.beginPath();
+          ctx.arc(pointer.x, pointer.y, 46, 0, Math.PI * 2);
+          ctx.strokeStyle = attractMode ? 'rgba(0, 240, 255, 0.35)' : 'rgba(139, 92, 246, 0.45)';
+          ctx.lineWidth = 1.5;
+          ctx.stroke();
+        }
+
+        // Update & render orbs
+        for (let i = 0; i < orbs.length; i++) {
+          const orb = orbs[i];
+
+          if (pointer.active) {
+            const dx = pointer.x - orb.x;
+            const dy = pointer.y - orb.y;
+            const distSq = Math.max(180, dx * dx + dy * dy);
+            const force = (attractMode ? 1 : -1.35) * (240 / distSq);
+            orb.vx += dx * force * 0.08;
+            orb.vy += dy * force * 0.08;
+          }
+
+          orb.vx *= 0.985;
+          orb.vy *= 0.985;
+          orb.x += orb.vx;
+          orb.y += orb.vy;
+
+          // Wall bounce
+          if (orb.x < orb.r) { orb.x = orb.r; orb.vx *= -0.85; }
+          if (orb.x > w - orb.r) { orb.x = w - orb.r; orb.vx *= -0.85; }
+          if (orb.y < orb.r) { orb.y = orb.r; orb.vy *= -0.85; }
+          if (orb.y > h - orb.r) { orb.y = h - orb.r; orb.vy *= -0.85; }
+
+          // Target collision check
+          const tdx = target.x - orb.x;
+          const tdy = target.y - orb.y;
+          if (Math.hypot(tdx, tdy) < target.r + orb.r) {
+            score++;
+            document.getElementById('sandboxScore').textContent = score;
+            spawnTarget();
+          }
+
+          orb.trail.push({ x: orb.x, y: orb.y });
+          if (orb.trail.length > 7) orb.trail.shift();
+
+          if (orb.trail.length > 1) {
+            ctx.beginPath();
+            ctx.moveTo(orb.trail[0].x, orb.trail[0].y);
+            for (let t = 1; t < orb.trail.length; t++) {
+              ctx.lineTo(orb.trail[t].x, orb.trail[t].y);
+            }
+            ctx.strokeStyle = orb.hue;
+            ctx.globalAlpha = 0.35;
+            ctx.lineWidth = orb.r * 0.7;
+            ctx.stroke();
+            ctx.globalAlpha = 1;
+          }
+
+          ctx.beginPath();
+          ctx.arc(orb.x, orb.y, orb.r, 0, Math.PI * 2);
+          ctx.fillStyle = orb.hue;
+          ctx.fill();
+        }
+
+        requestAnimationFrame(animate);
+      }
+
+      window.addEventListener('load', () => {
+        resetSandbox();
+        animate();
+      });
+    })();
+
+    // 3. Project Source Code Modal Data & Handlers
+    const codeSnippets = {
+      aether: {
+        tag: 'UNITY C# // MADE & DESIGNED BY MOSTAFA ABDELRRAHMAN EL SAYED',
+        title: 'AETHER DRIFT — Anti-Gravity Suspension Solver',
+        desc: 'Architected by Mostafa Abdelrrahman El Sayed: Uses four corner raycasts with Hooke’s law spring-damper forces to maintain smooth hover elevation over banked spline tracks at 120 FPS.',
+        code: `// Made & Designed by Mostafa Abdelrrahman El Sayed (c) 2026
+void ApplyHoverForce(Transform thruster, float restDist, float stiffness) {
+  if (Physics.Raycast(thruster.position, -thruster.up, out RaycastHit hit, restDist)) {
+    float compression = 1f - (hit.distance / restDist);
+    float springForce = compression * stiffness;
+    float dampingForce = Vector3.Dot(rb.GetPointVelocity(thruster.position), thruster.up) * damping;
+    rb.AddForceAtPosition(thruster.up * (springForce - dampingForce), thruster.position);
+  }
+}`
+      },
+      pulse: {
+        tag: 'MOBILE APP // MADE & DESIGNED BY MOSTAFA ABDELRRAHMAN EL SAYED',
+        title: 'PULSE QUEST — Sub-Millisecond Beat Window Detector',
+        desc: 'Architected by Mostafa Abdelrrahman El Sayed: Compares hardware DSP audio clock timestamps against touch input events to score rhythm accuracy without frame-rate jitter.',
+        code: `// Made & Designed by Mostafa Abdelrrahman El Sayed (c) 2026
+public HitGrade EvaluateTouch(double touchDspTime, double targetBeatTime) {
+  double deltaMs = Math.Abs(touchDspTime - targetBeatTime) * 1000.0;
+  if (deltaMs <= 22.0) { TriggerCoreHaptic(ImpactStyle.Heavy); return HitGrade.Perfect; }
+  if (deltaMs <= 55.0) { TriggerCoreHaptic(ImpactStyle.Light); return HitGrade.Great; }
+  return HitGrade.Miss;
+}`
+      },
+      voxel: {
+        tag: 'C++20 // MADE & DESIGNED BY MOSTAFA ABDELRRAHMAN EL SAYED',
+        title: 'VOXELFORGE — Quad Merging Chunk Mesher',
+        desc: 'Architected by Mostafa Abdelrrahman El Sayed: Merges coplanar adjacent voxel faces into single quads, reducing triangle count by up to 84% per 32x32x32 chunk.',
+        code: `// Made & Designed by Mostafa Abdelrrahman El Sayed (c) 2026
+while (w + width < CHUNK_SIZE && mask[n + width] == currentFace) {
+  width++;
+}
+bool done = false;
+while (h + height < CHUNK_SIZE && !done) {
+  for (int k = 0; k < width; k++) {
+    if (mask[n + k + height * CHUNK_SIZE] != currentFace) { done = true; break; }
+  }
+  if (!done) height++;
+}`
+      },
+      chrono: {
+        tag: 'GODOT 4 / RUST // MADE & DESIGNED BY MOSTAFA ABDELRRAHMAN EL SAYED',
+        title: 'CHRONO HEX — Axial Coordinate Pathfinding',
+        desc: 'Architected by Mostafa Abdelrrahman El Sayed: Computes shortest tactical movement paths across weighted hex terrain tiles with deterministic tie-breaking for multiplayer replays.',
+        code: `# Made & Designed by Mostafa Abdelrrahman El Sayed (c) 2026
+func hex_distance(a: Vector2i, b: Vector2i) -> int:
+  var dq = abs(a.x - b.x)
+  var dr = abs(a.y - b.y)
+  var ds = abs((-a.x - a.y) - (-b.x - b.y))
+  return max(dq, max(dr, ds))`
+      }
+    };
+
+    const codeModal = document.getElementById('codeModal');
+    window.openCodeModal = function(key) {
+      const item = codeSnippets[key];
+      if (!item) return;
+      document.getElementById('modalTag').textContent = item.tag;
+      document.getElementById('modalTitle').textContent = item.title;
+      document.getElementById('modalDesc').textContent = item.desc;
+      document.getElementById('modalCode').textContent = item.code;
+      codeModal.classList.remove('hidden');
+      codeModal.classList.add('flex');
+    };
+
+    window.closeCodeModal = function() {
+      codeModal.classList.add('hidden');
+      codeModal.classList.remove('flex');
+    };
+
+    codeModal.addEventListener('click', e => {
+      if (e.target === codeModal) closeCodeModal();
+    });
+
+    // 4. Clipboard Copy (Modern API + iFrame/Legacy Fallback)
+    async function copyTextToClipboard(text) {
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(text);
+          return;
+        }
+      } catch (_) {}
+      const tempInput = document.createElement('input');
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+    }
+
+    window.copyPublicUrl = async function(triggerBtn) {
+      await copyTextToClipboard(PORTFOLIO_URL);
+      const btn = triggerBtn || document.getElementById('copyUrlBtn');
+      if (btn) {
+        const originalText = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(() => { btn.textContent = originalText; }, 2000);
+      }
+    };
+
+    // 5. Live Website Launcher & Social Share Logic
+    const launchModal = document.getElementById('launchModal');
+
+    // Populate direct social share hrefs
+    const encodedUrl = encodeURIComponent(PORTFOLIO_URL);
+    const encodedText = encodeURIComponent(`${PORTFOLIO_SHARE_TEXT} ${PORTFOLIO_URL}`);
+    document.getElementById('shareWhatsApp').href = `https://wa.me/?text=${encodedText}`;
+    document.getElementById('shareTwitter').href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(PORTFOLIO_SHARE_TEXT)}&url=${encodedUrl}`;
+    document.getElementById('shareLinkedIn').href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
+    document.getElementById('shareEmailLink').href = `mailto:?subject=${encodeURIComponent(PORTFOLIO_TITLE)}&body=${encodedText}`;
+
+    window.openLaunchModal = function() {
+      launchModal.classList.remove('hidden');
+      launchModal.classList.add('flex');
+    };
+
+    window.closeLaunchModal = function() {
+      launchModal.classList.add('hidden');
+      launchModal.classList.remove('flex');
+    };
+
+    launchModal.addEventListener('click', e => {
+      if (e.target === launchModal) closeLaunchModal();
+    });
+
+    window.handleLiveSiteClick = function(e) {
+      if (window.location.protocol === 'file:' || window.location.protocol === 'about:' || window.self !== window.top) {
+        e.preventDefault();
+        openLaunchModal();
+      }
+    };
+
+    window.shareWebsite = async function() {
+      if (navigator.share) {
+        try {
+          await navigator.share({
+            title: PORTFOLIO_TITLE,
+            text: PORTFOLIO_SHARE_TEXT,
+            url: PORTFOLIO_URL
+          });
+          return;
+        } catch (err) {
+          if (err && err.name === 'AbortError') return;
+        }
+      }
+      await copyTextToClipboard(PORTFOLIO_URL);
+      openLaunchModal();
+    };
+
+    // Escape key closes modals
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        closeLaunchModal();
+        closeCodeModal();
+      }
+    });
+
+    // Email copy & Contact form feedback
+    document.getElementById('copyEmailBtn').addEventListener('click', async function() {
+      const emailText = document.getElementById('devEmail').textContent;
+      await copyTextToClipboard(emailText);
+      this.textContent = 'Copied!';
+      setTimeout(() => { this.textContent = 'Copy Email'; }, 2000);
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', e => {
+      e.preventDefault();
+      document.getElementById('formFeedback').classList.remove('hidden');
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>
